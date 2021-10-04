@@ -2,10 +2,14 @@
 # coding=utf-8
 import json
 import time
+import os
 import random
 from selenium import webdriver
 from random_words import RandomWords
 word_generator = RandomWords()
+
+CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
+
 
 # 初始化
 def init():
@@ -36,12 +40,12 @@ def search_once(driver,word_generator=word_generator):
     input_ele.send_keys(word_generator.random_word())
     input_ele.submit()
 
-def main(times=30, sleep_time=15):
+def main(times=30, sleep_time=15,cookie_path="./presearch_cookies/pre_cookie_1574448427_qqcom.json"):
     """
     默认搜索 30 次
     """
     driver = init()
-    load_cookie(driver,cookie_path="./presearch_cookies/pre_cookie_1574448427_qqcom.json")
+    load_cookie(driver,cookie_path=cookie_path)
     driver.get("https://engine.presearch.org")
     for i in range(times):
         search_once(driver)
@@ -49,5 +53,7 @@ def main(times=30, sleep_time=15):
     driver.quit()
 
 if __name__=='__main__':
-    main(times=30)
+    for cookie_path in os.listdir(os.path.join(CURRENT_DIR,"presearch_cookies")):
+        cookie_path = os.path.join(CURRENT_DIR, "presearch_cookies", cookie_path)
+        main(times=40, cookie_path=cookie_path)
 
