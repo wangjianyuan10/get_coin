@@ -7,13 +7,26 @@ import random
 from selenium import webdriver
 from random_words import RandomWords
 word_generator = RandomWords()
+from datetime import datetime
+import shutil
+from collections import Counter
 
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
+# os.system("/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 &")
+options = webdriver.ChromeOptions()
+# options.add_experimental_option("debuggerAddress","127.0.0.1:9222") 
+
+if not os.path.exists( os.path.join(CURRENT_DIR,"log" )):
+    os.makedirs( os.path.join(CURRENT_DIR,"log" ) )
+
+log_file = os.path.join(CURRENT_DIR,"log",datetime.utcnow().strftime("%Y%m%d.log"))
+if not os.path.exists(log_file):
+    open(log_file,"w").close()
 
 # 初始化
 def init():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     driver.get("https://engine.presearch.org")
     return driver
 
@@ -49,11 +62,23 @@ def main(times=30, sleep_time=15,cookie_path="./presearch_cookies/pre_cookie_157
     driver.get("https://engine.presearch.org")
     for i in range(times):
         search_once(driver)
+        with open(log_file,'a') as fp:
+            fp.write(cookie_path+"\n")
+
         time.sleep(sleep_time+random.random()*sleep_time)
     driver.quit()
 
 if __name__=='__main__':
-    for cookie_path in os.listdir(os.path.join(CURRENT_DIR,"presearch_cookies")):
-        cookie_path = os.path.join(CURRENT_DIR, "presearch_cookies", cookie_path)
-        main(times=40, cookie_path=cookie_path)
+    completed_dict = dict(Counter(open(log_file).read().split("\n")))
+    print(completed_dict)
+    for dirname in ['presearch_cookies',"walker_211007", "zhaolanping_211007"]:
+    # for dirname in [ "zhaolanping_211007"]:
+        for cookie_path in os.listdir(os.path.join(CURRENT_DIR,dirname)):
+            cookie_path = os.path.join(CURRENT_DIR, dirname, cookie_path)
+            print(cookie_path)
+            if cookie_path.endswith(".json"):
+                times = 30+random.randint(0,5)-completed_dict.get(cookie_path,0) 
+                # times = 30-completed_dict.get(cookie_path,0) 
+                if times > 0:
+                    main(times=times,cookie_path=cookie_path)
 

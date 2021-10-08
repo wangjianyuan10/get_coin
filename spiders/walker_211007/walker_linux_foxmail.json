@@ -1,0 +1,71 @@
+[
+{
+    "domain": ".presearch.org",
+    "expirationDate": 1634209377.917855,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "presearch_session",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "eyJpdiI6InpyaGlJcVd3ZHRxSEZGaE05Z3ZnK0E9PSIsInZhbHVlIjoicVwvd1hKUWNpWlZKZk94SUJuTzJyTGtjdjFqN1VHZEEyR1ZmOVl1MkpEK2NhOWdHSWVhNGphemJleVFkR1N6Tko3WHFqUXJKd3FFdmJOQUNXXC9CcEV6RWRcL1pcL1NzWGdrMXhESjBBSTNNRWY2UjlkVGR4ZHZJc0kwZFNxaVRHdWVhIiwibWFjIjoiZmU1YjMwNzUyMzdlYWU5ZmVlZWIyZTUxNzA4MGEzOTI0OWI3YzE4MThjMTBlNmZiYzUzZWRlN2U1NGUwYzJlZSJ9",
+    "id": 1
+},
+{
+    "domain": ".presearch.org",
+    "expirationDate": 1634209377.917816,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "XSRF-TOKEN",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "eyJpdiI6IlVvUG14UmxGalN6QnpNV0VJSjQwTnc9PSIsInZhbHVlIjoiVjNsUXlJRTJEaE1FY1kxa1hzazFIMTJjUFh2YXp2ZmVXMW03SXM1TUNRVHI4QVRoUmVBa1g1N09tRk9IS1NSaSIsIm1hYyI6IjZiZjgxY2ZkMWMwOWE4ZmQ1ZmVjMWExNzEyNzg4MDRhNTNlYmEzYzFkNTRlZDhiMTU1YTdjNTcyNjkyNzMzMTcifQ%3D%3D",
+    "id": 2
+},
+{
+    "domain": "engine.presearch.org",
+    "expirationDate": 1634209387.521966,
+    "hostOnly": true,
+    "httpOnly": false,
+    "name": "AWSALB",
+    "path": "/",
+    "sameSite": "unspecified",
+    "secure": false,
+    "session": false,
+    "storeId": "0",
+    "value": "tm/2vT9RCfPg4CGfX0wewdY+9RVaE0bz3sECspoBw7FRSbZGKTO+iPqqTW+zSYy9vpEG7f0yovjYzHb4f1fuCfrG+TBPoR2ZefgJeajRZngPzShPioNsgM220g+Q",
+    "id": 3
+},
+{
+    "domain": "engine.presearch.org",
+    "hostOnly": true,
+    "httpOnly": false,
+    "name": "b",
+    "path": "/",
+    "sameSite": "unspecified",
+    "secure": true,
+    "session": true,
+    "storeId": "0",
+    "value": "0",
+    "id": 4
+},
+{
+    "domain": "engine.presearch.org",
+    "expirationDate": 1665140587,
+    "hostOnly": true,
+    "httpOnly": false,
+    "name": "token",
+    "path": "/",
+    "sameSite": "lax",
+    "secure": false,
+    "session": false,
+    "storeId": "0",
+    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MzM2MDQ1ODgsImV4cCI6MTYzNDIwOTM4OCwidXNlcl9pZCI6Mjc1MjY4OSwidXNlcl9hcGlfa2V5Ijoib2VUMWFEcGRiUDBsWFNzRmcxU2Z6b3pVb2laczdOWkNOUUNzY0tnWkM5WU56OWdUUzl4QzBiSzV4QmZvb3UxR1NSTjREZ2xSbnBsWEZPTjQzUExGZXpiWHA5dzdpUnoyeHV3MHNzckV6UDdHM3h3ZGt4VXBxdTZUTmtFNUc2d0prSUlaV1ZkVHF6Q2RYeldFNUxVT3ZJIiwiYmV0YXMiOltdfQ.FNOu_FRq8tYyW5Z04N8vSCyLzSvjg6fzvHNnap0HoWGcnmOYUCzNcTxBp7RsLUtRgrBZgGFUM-LxzoanOqsWU8EI6KcVrLvQnA3LYyTrZkhNl7xEVDPyCWsxJSr6n-sd2Q4f-0vj4yhq00_NfO26zmVCvstLYJd6ZTX9QoMGNjEJ53rFYCzMCMFCDTdkW0sM5vJi2LHDbwj78WCxiy-H-CT_0GtyG5mqGXC99nGOPYoOdrGBBU6ULEV9VUjWM7ahQruoz3rbji3KwFLP5hnZ3ChDg7a_0HuHJL35hW-BK95Cend1LQiqeiyT__0QsDA8SeEcHfwuLbxtpbQWrb1fEQ",
+    "id": 5
+}
+]
